@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BLL_DAL;
+using System.Security.Cryptography;
+using System.Text;
 namespace WEB.Controllers
 {
     public class NhanVienController : Controller
