@@ -29,14 +29,25 @@ namespace GUI
             btnLuu.Enabled = false;
             NHANVIEN nv = xl.TaiKhoanNhanVien(manv);
             txtIdNhanvien.Text = nv.MANV.ToString();
+            txtChucvu.Text = xl.GetChucVu(manv);
             txtTen.Text = nv.TENNV;
             txtNgaysinh.Text = nv.NGAYSINH.ToString();
             txtGioitinh.Text = nv.GIOITINH;
             txtDiaChi.Text = nv.DIACHI;
             buttonEdit1.Text = nv.HINH;
-            Bitmap bit = new Bitmap(buttonEdit1.Text);
-            pictureBox1.Image = bit;
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            try
+            {
+                Bitmap bit = new Bitmap(@"D:\DoAn\PhanMemThongMinh\DoAnQuanLyNhaTro\GUI\Image\" + buttonEdit1.Text);
+                pictureBox1.Image = bit;
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            catch (Exception)
+            {
+                Bitmap bit = new Bitmap(buttonEdit1.Text);
+                pictureBox1.Image = bit;
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+          
         }
 
         private void txtIdNhanvien_KeyDown(object sender, KeyEventArgs e)

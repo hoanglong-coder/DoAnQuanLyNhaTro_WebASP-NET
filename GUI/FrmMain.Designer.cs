@@ -126,6 +126,7 @@
             this.ribbonPage2});
             this.ribbon.Size = new System.Drawing.Size(1407, 231);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // skinRibbonGalleryBarItem1
             // 

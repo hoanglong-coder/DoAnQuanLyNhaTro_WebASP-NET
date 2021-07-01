@@ -75,6 +75,13 @@ namespace GUI
                 ribbonPage1.Dispose();
                 return;
             }
+            else if (xl.KiemTrachua(IdNhanvien))
+            {
+                ribbonPage5.Dispose();
+                ribbonPage3.Dispose();
+                ribbonPage1.Dispose();
+                ribbonPage4.Dispose();
+            }
             else if (xl.KiemTraToanQuyen(IdNhanvien))
             {
                 return;
@@ -202,6 +209,11 @@ namespace GUI
             FrmThayDoiMatKhau frm = new FrmThayDoiMatKhau(IdNhanvien);
             frm.Name = "Đổi mật khẩu";
             frm.ShowDialog();
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

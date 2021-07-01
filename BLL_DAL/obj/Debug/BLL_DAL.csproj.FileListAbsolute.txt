@@ -3,3 +3,4 @@ D:\DoAn\PhanMemThongMinh\DoAnQuanLyNhaTro\BLL_DAL\bin\Debug\BLL_DAL.dll
 D:\DoAn\PhanMemThongMinh\DoAnQuanLyNhaTro\BLL_DAL\bin\Debug\BLL_DAL.pdb
 D:\DoAn\PhanMemThongMinh\DoAnQuanLyNhaTro\BLL_DAL\obj\Debug\BLL_DAL.dll
 D:\DoAn\PhanMemThongMinh\DoAnQuanLyNhaTro\BLL_DAL\obj\Debug\BLL_DAL.pdb
+D:\DoAn\PhanMemThongMinh\DoAnQuanLyNhaTro\BLL_DAL\obj\Debug\BLL_DAL.csprojResolveAssemblyReference.cache

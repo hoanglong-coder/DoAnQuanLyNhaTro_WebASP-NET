@@ -37,7 +37,7 @@ namespace GUI
                 return;
             }
             xl.DoiMatKhau(manv, textBox1.Text, textBox2.Text);
-            MessageBox.Show("Thay đổi thành công");
+            
             this.Close();
         }
     }

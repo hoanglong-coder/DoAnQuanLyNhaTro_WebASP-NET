@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+using System.Security.Cryptography;
 namespace BLL_DAL
 {
     public class XuLy
@@ -27,9 +28,18 @@ namespace BLL_DAL
         }
         public bool DangNhap(string tk,string mk)
         {
+            byte[] pass = ASCIIEncoding.ASCII.GetBytes(mk);
+            byte[] hasdata = new MD5CryptoServiceProvider().ComputeHash(pass);
+
+            string hasspass = "";
+            foreach (byte item in hasdata)
+            {
+                hasspass += item;
+            }
+
             try
             {
-                var dn = db.TAIKHOANs.Count(t => t.USERNAME == tk && t.PASSWORD == mk);
+                var dn = db.TAIKHOANs.Count(t => t.USERNAME == tk && t.PASSWORD == hasspass);
                 if (dn == 0)
                 {
                     return false;
@@ -62,14 +72,41 @@ namespace BLL_DAL
         }
         public void DoiMatKhau(int idnhanvien, string mkcu, string mkmoi)
         {
-            var nv = db.TAIKHOANs.Single(t => t.MANV == idnhanvien && t.PASSWORD == mkcu);
+            byte[] pass = ASCIIEncoding.ASCII.GetBytes(mkcu);
+            byte[] hasdata = new MD5CryptoServiceProvider().ComputeHash(pass);
+            string hasspass = "";
+            foreach (byte item in hasdata)
+            {
+                hasspass += item;
+            }
+
+            byte[] pass1 = ASCIIEncoding.ASCII.GetBytes(mkmoi);
+            byte[] hasdata1 = new MD5CryptoServiceProvider().ComputeHash(pass1);
+            string hasspass5 = "";
+            foreach (byte item in hasdata1)
+            {
+                hasspass5 += item;
+            }
+
+
+            var nv = db.TAIKHOANs.SingleOrDefault(t => t.MANV == idnhanvien && t.PASSWORD == hasspass);
             if (nv == null)
             {
                 MessageBox.Show("Sai mật khẩu củ");
                 return;
             }
-            nv.PASSWORD = mkmoi;
+            nv.PASSWORD = hasspass5;
             db.SubmitChanges();
+            MessageBox.Show("Thay đổi thành công");
+        }
+        public string GetChucVu(int manv)
+        {
+            var data = (from t in db.TAIKHOANs
+                        from q in db.PHANQUYENs
+                        where t.MAPQ == q.MAPQ
+                        select t).Single(t => t.MANV == manv).PHANQUYEN.TENQUYEN;
+
+            return data;
         }
         public List<TAIKHOAN> DsTaiKhoan()
         {
@@ -81,9 +118,16 @@ namespace BLL_DAL
         }
         public void ThemTaiKhoan(string Username,string Password, int Mapq , int manv)
         {
+            byte[] pass = ASCIIEncoding.ASCII.GetBytes(Password);
+            byte[] hasdata = new MD5CryptoServiceProvider().ComputeHash(pass);
+            string hasspass = "";
+            foreach (byte item in hasdata)
+            {
+                hasspass += item;
+            }
             TAIKHOAN tk = new TAIKHOAN();
             tk.USERNAME = Username;
-            tk.PASSWORD = Password;
+            tk.PASSWORD = hasspass;
             tk.MAPQ = Mapq;
             tk.MANV = manv;
             db.TAIKHOANs.InsertOnSubmit(tk);
@@ -126,6 +170,15 @@ namespace BLL_DAL
         public bool KiemTraThue_ThanhToan(int manv)
         {
             var kt = db.TAIKHOANs.SingleOrDefault(t => t.MANV == manv && t.MAPQ == 1);
+            if (kt == null)
+            {
+                return false;
+            }
+            return true;
+        }
+        public bool KiemTrachua(int manv)
+        {
+            var kt = db.TAIKHOANs.SingleOrDefault(t => t.MANV == manv && t.MAPQ == 6);
             if (kt == null)
             {
                 return false;
