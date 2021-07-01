@@ -1,0 +1,130 @@
+﻿@model BLL_DAL.NHANVIEN
+
+@{
+    ViewBag.Title = "CreateNhanvien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+     <section id="cover" class="min-vh-100" style="background-color: cornsilk;">
+       <div id="cover-caption">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto  form p-4">
+                    <h1 class="display-4 py-2 text-truncate text-center" style="color:red;font-weight:bold;font-size:50px;font-family:'-webkit-body'">Thêm nhân viên</h1>
+                    <div class="px-2">                     
+                    <form class="row g-3 needs-validation" style="width:700px;height:500px" novalidate>
+  <div class="mb-3">
+    <label for="validationCustom01" class="form-label" style="color:black";>Tên nhân viên</label>
+    <input type="text" class="form-control" id="validationCustom01" name="Ten" required/>
+      <div class="valid-feedback">
+      Looks good!
+    </div>
+      <label for="exampleInputPassword1" class="form-label" style="color:black">Ngày sinh</label>
+      <input type="date" class="form-control" id="validationCustom02" name="Ngay" placeholder="DD-MM-YYYY" required>
+      <label for="exampleInputPassword1" class="form-label"style="color:black">Giới tính</label> 
+              <select class="form-select" id="validationCustom04" name="GT" required>
+      <option selected disabled value="">Chọn...</option>
+      <option>Nam</option>
+      <option>Nữ</option>
+    </select>              
+       <label for="exampleInputPassword1" class="form-label"style="color:black">Địa chỉ</label>
+    <select class="form-select" id="validationCustom05" name="DC" required>
+      <option selected disabled value="">Chọn...</option>
+      <option>Hòa Bình</option>
+      <option>Sơn La</option>
+      <option>Điện Biên</option>
+        <option>Lai Châu</option>
+        <option>Lào Cai</option>
+        <option>Yên Bái</option>
+        <option>Phú Thọ</option>
+        <option>Hà Giang</option>
+        <option>Tuyên Quang</option>
+        <option>Cao Bằng</option>
+        <option>Bắc Kạn</option>
+        <option>Thái Nguyên</option>
+        <option>Lạng Sơn</option>
+        <option>Bắc Giang</option>
+        <option>Quảng Ninh</option>
+        <option>Hà Nội</option>
+        <option>Bắc Ninh</option>
+        <option>Hà Nam</option>
+        <option>Hải Dương</option>
+        <option>Hải Phòng</option>
+        <option>Hưng Yên</option>
+        <option>Nam Định</option>
+        <option>Thái Bình</option>
+        <option>Vĩnh Phúc</option>
+        <option>Ninh Bình</option>
+        <option>Thanh Hóa</option>
+        <option>Nghệ An</option>
+        <option>Hà Tĩnh</option>
+        <option>Quảng Bình</option>
+        <option>Quảng Trị</option>
+        <option>Thừa Thiên Huế</option>
+        <option>Quảng Nam</option>
+        <option>Quảng Ngãi</option>
+        <option>Bình Định</option>
+        <option>Phú Yên</option>
+        <option>Khánh Hòa</option>
+        <option>Ninh Thuận</option>
+        <option>Bình Thuận</option>
+        <option>Kon Tum</option>
+        <option>Gia Lai</option>
+        <option>Đắk Lắk</option>
+        <option>Đắk Nông</option>
+        <option>Lâm Đồng</option>
+        <option>TP Hồ Chí Minh</option>
+        <option>Bà Rịa Vũng Tàu</option>
+        <option>Bình Dương</option>
+        <option>Bình Phước</option>
+        <option>Đồng Nai</option>
+        <option>Tây Ninh</option>
+        <option>An Giang</option>
+        <option>Bạc Liêu</option>
+        <option>Bến Tre</option>
+        <option>Cà Mau</option>
+        <option>Cần Thơ</option>
+        <option>Đồng Tháp</option>
+        <option>Hậu Giang</option>
+        <option>Kiên Giang</option>
+        <option>Long An</option>
+        <option>Sóc Trăng</option>
+        <option>Tiền Giang</option>
+        <option>Trà Vinh</option>
+        <option>Vĩnh Long</option>
+    </select> 
+      <div class="valid-feedback">
+      Looks good!
+    </div>
+      <label for="exampleInputPassword1" class="form-label"style="color:black">Hình</label>
+    <input type="file" class="form-control"  name="HINH" required/>
+      <div class="valid-feedback">
+      Looks good!
+    </div>
+      <label for="exampleInputPassword1" class="form-label"style="color:black">CMND</label>
+    <input type="text" class="form-control" name="CMND"   pattern="[1-9]{1}[0-9]{8}" onkeypress="return event.charCode >= 48 && event.charCode <= 57"  required/>
+      <label for="exampleInputPassword1" class="form-label"style="color:black">Số điện thoại</label>
+    <input type="text" class="form-control" name="SDT"  pattern="[0]{1}[0-9]{9}"  onkeypress="return event.charCode >= 48 && event.charCode <= 57"  required/>
+      
+  </div>
+  <button type="submit" class="btn btn-primary">Thêm nhân viên</button>
+</form>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+     </section>
+    </fieldset>
+    <script type="text/javascript">
+           $(function () {
+               $('#datetimepicker1').datetimepicker();
+           });
+    </script>
+}

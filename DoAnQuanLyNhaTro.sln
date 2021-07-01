@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{7AE3BEFA-776A-494F-9EEF-FC0391B578D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAL", "BLL_DAL\BLL_DAL.csproj", "{36E5813C-B981-4CF3-928A-643E8B9885AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB", "WEB\WEB.csproj", "{723569AB-FFFF-4B28-903E-D38BB67BBEC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AE3BEFA-776A-494F-9EEF-FC0391B578D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE3BEFA-776A-494F-9EEF-FC0391B578D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE3BEFA-776A-494F-9EEF-FC0391B578D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE3BEFA-776A-494F-9EEF-FC0391B578D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E5813C-B981-4CF3-928A-643E8B9885AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E5813C-B981-4CF3-928A-643E8B9885AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E5813C-B981-4CF3-928A-643E8B9885AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E5813C-B981-4CF3-928A-643E8B9885AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723569AB-FFFF-4B28-903E-D38BB67BBEC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723569AB-FFFF-4B28-903E-D38BB67BBEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723569AB-FFFF-4B28-903E-D38BB67BBEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723569AB-FFFF-4B28-903E-D38BB67BBEC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

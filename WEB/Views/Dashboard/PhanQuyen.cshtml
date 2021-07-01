@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "PhanQuyen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+<script src="~/assets/admin/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/assets/admin/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<h2>Phân quyền tài khoản</h2>
+<table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">Tên nhân viên</th>
+                                            <th class="border-top-0">User name</th>
+                                            <th class="border-top-0">Password</th>                                           
+                                            <th class="border-top-0">Quyền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="Dstaikhoan">                                       
+                                    </tbody>
+                                </table>
+<script type="text/javascript">
+    history.forward();
+    $(document).ready(function () {
+        LoadTaikhoan();
+    })
+    function LoadTaikhoan() {
+        
+        $.ajax({
+            url: '/Dashboard/LoadPhanQuyen',
+            type: 'get',
+            success: function (data) {               
+                if (data.code = 200)
+                {
+                    $.each(data.pq, function (k, v) {
+                        let ma = v.MANV;
+                        let tr = '<tr id="'+v.MANV+'">'
+                        tr+='<td>'+v.TENNV+'</td>';
+                        tr+='<td>'+v.USERNAME+'</td>';
+                        tr+='<td>'+v.PASSWORD+'</td>';
+                        tr+='<td>';
+                        tr+='<select  aria-label="Default select example" name="doipq'+ma+'" id="mySelect'+ma+'"></select>';
+                        tr+='</td>';
+                        tr+='</tr>';
+                        $('#Dstaikhoan').append(tr);
+                        let quyen = v.QUYEN;               
+                        $.ajax({
+                            url: '/Dashboard/LoadTenQuyen',
+                            type: 'get',
+                            success: function (data) {
+                                if (data.code = 200)
+                                {
+                                    var x = document.getElementById("mySelect"+ma+"");
+                                    $.each(data.dsq, function (k, v) {
+                                        var option = document.createElement("option");   
+                                        option.text = v.TEN;
+                                        option.value = v.ID;
+                                        x.add(option);
+                                        document.getElementById("mySelect"+ma+"").value = quyen;
+                                    });  
+                                    $(document.body).on('change', 'select[name^="doipq'+ma+'"]', function(){
+                                        let nv = $(this).closest('tr').attr('id');
+                                        let doi = document.getElementById("mySelect"+ma+"").value;
+                                        $.ajax({
+                                            url:'/Dashboard/DoiQuyen',
+                                            type:'post',
+                                            data:{
+                                                manv:nv,
+                                                mapq:doi
+                                            },
+                                            success: function(data){
+                                                if(data.code=200)
+                                                {
+                                                    alert(data.msg);
+                                                }else if(data.code=500)
+                                                {
+                                                    alert(data.msg);
+                                                }
+                                            }
+                                        });
+                                    });
+                                }
+                                
+                            }
+                        });
+                    });
+                  
+                }
+               
+            }
+        });       
+    }
+</script>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BLL_DAL.TAIKHOAN>
+
+@{
+    ViewBag.Title = "DanhSachTaiKhoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách tài khoản </h2>
+
+
+
+                                <table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">Tài khoản</th>
+                                            <th class="border-top-0">Mật khẩu</th>
+                                            <th class="border-top-0">Mã phân quyền</th>
+                                            <th class="border-top-0">Mã nhân viên</th>
+                                            <th class="border-top-0">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model) {
+                                        <tr>
+                                            <td> @Html.DisplayFor(modelItem => item.USERNAME)</td>
+                                            <td class="txt-oflo">@Html.DisplayFor(modelItem => item.PASSWORD)</td>
+                                            <td> @Html.DisplayFor(modelItem => item.MAPQ)</td>
+                                            <td class="txt-oflo"> @Html.DisplayFor(modelItem => item.MANV)</td>    
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>

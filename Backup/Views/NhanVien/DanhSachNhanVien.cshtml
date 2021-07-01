@@ -1,0 +1,57 @@
+﻿@model IEnumerable<BLL_DAL.NHANVIEN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}<style>
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(6); /* IE 9 */
+  -webkit-transform: scale(6); /* Safari 3-8 */
+  transform: scale(6); 
+}
+</style>
+  <button class="btn btn-primary" type="button" style="width:180px" onclick="ChinhSua()">Thêm nhân viên</button>
+<table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">Mã nhân viên</th>
+                                            <th class="border-top-0">Tên nhân viên</th>
+                                            <th class="border-top-0">Ngày sinh</th>
+                                            <th class="border-top-0">Giới tính</th>
+                                            <th class="border-top-0">Địa chỉ</th>
+                                            <th class="border-top-0">Số điện thoại</th>
+                                            <th class="border-top-0">CMND</th>
+                                            <th class="border-top-0">Hình</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model) {
+                                        <tr>
+                                            <td> @Html.DisplayFor(modelItem => item.MANV)</td>
+                                            <td class="txt-oflo">@Html.DisplayFor(modelItem => item.TENNV)</td>
+                                            <td> @Html.DisplayFor(modelItem => item.NGAYSINH.Value.Day)/@Html.DisplayFor(modelItem => item.NGAYSINH.Value.Month)/@Html.DisplayFor(modelItem => item.NGAYSINH.Value.Year)</td>
+                                            <td class="txt-oflo"> @Html.DisplayFor(modelItem => item.GIOITINH)</td>
+                                            <td> @Html.DisplayFor(modelItem => item.DIACHI)</td>    
+                                            <td class="txt-oflo"> @Html.DisplayFor(modelItem => item.SDT)</td>
+                                            <td> @Html.DisplayFor(modelItem => item.CMND)</td>
+                                            <td><img class="zoom" src="../Image/@Html.DisplayFor(modelItem => item.HINH)" width="30px" /></td>
+                                            <td> @Html.ActionLink("Xóa", "Delete", new { id=item.MANV })</td>
+                                            <td> @Html.ActionLink("Sửa", "Edit", new { id=item.MANV })</td>    
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+<script type="text/javascript">
+    history.forward();
+    function ChinhSua() {
+        window.location.href = '@Url.Action("CreateNhanvien", "NhanVien")';
+    }
+</script>
