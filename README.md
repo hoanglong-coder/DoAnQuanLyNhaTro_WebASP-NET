@@ -2,6 +2,7 @@
  #Create By Lê Hoàng Long.
 Phần mềm desktop kết hợp với ASP.NET quản lý user
 
+Tiếng Việt
 1. Điều kiện chạy phần mềm
   - Cài đặt hệ quản trị cơ sở dữ liệu SQL server Express.
   - Cài đặt Devexpress.
@@ -32,3 +33,33 @@ framework css là Bootstrap để xây dựng giao diện.
    - Sử dụng MailMessgae và SmtpClient để gửi hóa đơn hàng tháng qua mail của khách hàng.
    - Mã hóa mật khẩu theo md5.
 
+English
+1. Software running conditions
+  - Install SQL server Express database management system.
+  - Install Devexpress.
+  - Should run on Visual Studio 2012 to avoid unexpected errors.
+2. How to run the project
+  - Because the software is in the same solution, it is necessary to set the debug mode in Multiple startup project and debug each part.
+3. Solution Ingredients
+  - BLL_DAL: Is a dll that connects the interface layer and the data layer to help exchange data (CRUD). Use LINQ TO SQL library to connect
+  - GUI: Is the desktop interface part. Using Devexpress to build a beautiful and fast interface.
+  - WEB: The web interface part of the administrator. Using the ASP.NET MVC framework to build, using css, javascripts, jquery, and a
+framework css is Bootstrap to build the interface.
+4. Software business
+  - The user side can use the desktop interface to perform room management
+    - Rent - pay management
+    - Customer management
+    - Managing Room Management
+  - The user management side can use the Web interface to perform user management operations
+    - CRUD users.
+    - User permissions.
+    - Statistics: Customers, room availability...
+    - Revenue report: Every month of the year, Every year.
+  - Several accounts to use.
+    - Web: TK:admin, MK:admin.
+    - Desktop: TK:lehoanglong, Mk:123456789 (full permissions). TK:nguyena, Mk:123AAA (rent-pay access).
+5. Some applied technologies
+   - Use the KNN algorithm to advise the innkeeper on the price of the room and the common ground of that area and area.
+     - The algorithm is based on sample data of about 2000 records, using data Crawl technique from website batdongsan.com.vn.
+   - Use MailMessgae and SmtpClient to send monthly invoices via email of customers.
+   - Encrypt password according to md5.
