@@ -478,6 +478,11 @@ namespace BLL_DAL
             var rs = from c in db.KHACHTROs where c.TRANGTHAI == true select new { MAKT = c.MAKT, HOTEN = c.HOTEN, CMND = c.CMND, GIOITINH = c.GIOITINH, NGHENGHIEP = c.NGHENGHIEP, DIACHI = c.DIACHI, SDT = c.SDT, HINH = c.HINH, CHUHO = c.CHUHO, NGAYSINH = c.NGAYSINH,GMAIL=c.GMAIL };
             return rs;
         }
+        public IQueryable loadkt(string name)
+        {
+            var rs = from c in db.KHACHTROs where c.TRANGTHAI == true && c.HOTEN.Contains(name) || c.CMND.Contains(name) || c.SDT.Contains(name) select new { MAKT = c.MAKT, HOTEN = c.HOTEN, CMND = c.CMND, GIOITINH = c.GIOITINH, NGHENGHIEP = c.NGHENGHIEP, DIACHI = c.DIACHI, SDT = c.SDT, HINH = c.HINH, CHUHO = c.CHUHO, NGAYSINH = c.NGAYSINH, GMAIL = c.GMAIL };
+            return rs;
+        }
         public IQueryable loadktphieuthue()
         {
             var kt = (from u in db.PHIEUTHUEPHONGs select u.MAKT).ToList();
@@ -530,7 +535,11 @@ namespace BLL_DAL
             khachtro.GMAIL = email;
             db.SubmitChanges();
         }
-
+        public string GetMail(int makt)
+        {
+            var kt = db.KHACHTROs.Single(t => t.MAKT == makt).GMAIL.ToString();
+            return kt;
+        }
         //Dịch vụ
         public IQueryable LoadDV()
         {

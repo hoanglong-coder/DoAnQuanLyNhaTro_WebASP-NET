@@ -164,5 +164,10 @@ namespace GUI
             }
 
         }
+
+        private void textEdit5_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using BLL_DAL;
 namespace GUI
 {
@@ -68,7 +69,7 @@ namespace GUI
                     txtdiachi.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
                     txtsdt.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                     txturl.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                    txtemail.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                    txtemail.Text = xl.GetEmail(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
                     Bitmap bit = new Bitmap(dataGridView1.CurrentRow.Cells[7].Value.ToString());
                     pictureBox1.Image = bit;
                     pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -143,12 +144,21 @@ namespace GUI
             txtemail.Enabled = true;
             Refest();
         }
+        private static Regex email_validation()
+        {
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+
+            return new Regex(pattern, RegexOptions.IgnoreCase);
+        }
+        static Regex validate_emailaddress = email_validation();
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if(txthoten.Text==""||txtcmnd.Text==""||txtgioitinh.Text==""||txtngenghiep.Text==""||txtdiachi.Text==""||txtsdt.Text==""||txtemail.Text=="")
+            if (txthoten.Text == "" || txtcmnd.Text == "" || txtgioitinh.Text == "" || txtngenghiep.Text == "" || txtdiachi.Text == "" || txtsdt.Text == "" || txtemail.Text == "" || validate_emailaddress.IsMatch(txtemail.Text) != true)
             {
-                MessageBox.Show("Điền đủ thông tin!");
+                MessageBox.Show("Chưa điền đủ thông tin hoặc sai!");
                 return;
             }
             xl.ThemKT(txtngaysinh.Value, txthoten.Text, txtcmnd.Text, txtgioitinh.Text, txtngenghiep.Text, txtdiachi.Text, txtsdt.Text, txturl.Text,txtemail.Text);
@@ -184,6 +194,24 @@ namespace GUI
         private void textEdit1_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textEdit8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                var result = xl.loadkt(textEdit8.Text);
+                dataGridView1.DataSource = result;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void txtemail_Validating(object sender, CancelEventArgs e)
+        {
+                       
         }
     }
 }

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDanhSachKhachTro));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtemail = new DevExpress.XtraEditors.TextEdit();
             this.txtdiachi = new System.Windows.Forms.ComboBox();
             this.txtgioitinh = new System.Windows.Forms.ComboBox();
             this.txtngaysinh = new System.Windows.Forms.DateTimePicker();
@@ -42,6 +44,17 @@
             this.txturl = new DevExpress.XtraEditors.ButtonEdit();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtsdt = new DevExpress.XtraEditors.TextEdit();
             this.txtngenghiep = new DevExpress.XtraEditors.TextEdit();
@@ -68,24 +81,14 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtemail = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -114,11 +117,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -149,6 +152,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(1259, 857);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(401, 150);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(581, 26);
+            this.txtemail.StyleController = this.layoutControl1;
+            this.txtemail.TabIndex = 30;
+            this.txtemail.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtemail.Validating += new System.ComponentModel.CancelEventHandler(this.txtemail_Validating);
             // 
             // txtdiachi
             // 
@@ -331,6 +344,7 @@
             this.textEdit8.Size = new System.Drawing.Size(834, 26);
             this.textEdit8.StyleController = this.layoutControl1;
             this.textEdit8.TabIndex = 14;
+            this.textEdit8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit8_KeyPress);
             // 
             // dataGridView1
             // 
@@ -357,6 +371,83 @@
             this.dataGridView1.Size = new System.Drawing.Size(939, 303);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MAKT";
+            this.Column1.HeaderText = "Mã khách trọ";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "HOTEN";
+            this.Column2.HeaderText = "Họ tên";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "CMND";
+            this.Column3.HeaderText = "CMND/CCCD";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "GIOITINH";
+            this.Column4.HeaderText = "Giới tính";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "NGHENGHIEP";
+            this.Column5.HeaderText = "Nghề nghiệp";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "DIACHI";
+            this.Column6.HeaderText = "Địa chỉ";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "SDT";
+            this.Column7.HeaderText = "Số điện thoại";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "HINH";
+            this.Column8.HeaderText = "Url";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "CHUHO";
+            this.Column9.HeaderText = "Chủ hộ";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "NGAYSINH";
+            this.Column10.HeaderText = "Ngày sinh";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "GMAIL";
+            this.Column11.HeaderText = "Mail";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // pictureBox1
             // 
@@ -605,6 +696,15 @@
             this.layoutControlItem7.Text = "Địa chỉ";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(93, 19);
             // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.txtemail;
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 94);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(690, 30);
+            this.layoutControlItem19.Text = "Email";
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(93, 19);
+            // 
             // layoutControlGroup4
             // 
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -633,100 +733,9 @@
             this.layoutControlItem11.Text = "Tìm kiếm";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(93, 19);
             // 
-            // txtemail
+            // dxErrorProvider1
             // 
-            this.txtemail.Location = new System.Drawing.Point(401, 150);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(581, 26);
-            this.txtemail.StyleController = this.layoutControl1;
-            this.txtemail.TabIndex = 30;
-            this.txtemail.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
-            // 
-            // layoutControlItem19
-            // 
-            this.layoutControlItem19.Control = this.txtemail;
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 94);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(690, 30);
-            this.layoutControlItem19.Text = "Email";
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(93, 19);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MAKT";
-            this.Column1.HeaderText = "Mã khách trọ";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "HOTEN";
-            this.Column2.HeaderText = "Họ tên";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "CMND";
-            this.Column3.HeaderText = "CMND/CCCD";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "GIOITINH";
-            this.Column4.HeaderText = "Giới tính";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "NGHENGHIEP";
-            this.Column5.HeaderText = "Nghề nghiệp";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "DIACHI";
-            this.Column6.HeaderText = "Địa chỉ";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "SDT";
-            this.Column7.HeaderText = "Số điện thoại";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "HINH";
-            this.Column8.HeaderText = "Url";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "CHUHO";
-            this.Column9.HeaderText = "Chủ hộ";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "NGAYSINH";
-            this.Column10.HeaderText = "Ngày sinh";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "GMAIL";
-            this.Column11.HeaderText = "Mail";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
+            this.dxErrorProvider1.ContainerControl = this;
             // 
             // FrmDanhSachKhachTro
             // 
@@ -739,6 +748,7 @@
             this.Load += new System.EventHandler(this.FrmDanhSachKhachTro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txturl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -767,11 +777,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -833,5 +843,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

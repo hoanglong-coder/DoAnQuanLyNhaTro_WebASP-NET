@@ -35,9 +35,6 @@ namespace GUI
             comboBox2.DataSource = xl.loadkt();
             comboBox2.DisplayMember = "HOTEN";
             comboBox2.ValueMember = "MAKT";
-            comboBox1.DataSource = xl.LoadPT();
-            comboBox1.DisplayMember = "TENPHONG";
-            comboBox1.ValueMember = "MAPT";
 
             //Thông tin khách hàng
             comboBox4.DataSource = xl.loadkt();
@@ -61,7 +58,9 @@ namespace GUI
             comboBox10.DataSource = xl.loadkt();
             comboBox10.DisplayMember = "NGAYSINH";
             comboBox10.ValueMember = "MAKT";
-
+            comboBox3.DataSource = xl.loadkt();
+            comboBox3.DisplayMember = "GMAIL";
+            comboBox3.ValueMember = "MAKT";
             //Thông tin phòng
 
         }
@@ -74,7 +73,7 @@ namespace GUI
                 {
                     comboBox2.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
                     comboBox4.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
-                    comboBox1.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString());
+                    textEdit6.Text= xl.TenPhong(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
                     textEdit2.Text = dataGridView3.CurrentRow.Cells[3].Value.ToString();
                     textBox1.Text = dataGridView3.CurrentRow.Cells[5].Value.ToString();
                     comboBox5.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
@@ -83,6 +82,7 @@ namespace GUI
                     comboBox8.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
                     comboBox9.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
                     comboBox10.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
+                    comboBox3.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
                     textEdit1.Text = xl.TenLoaiPhong(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
                     textEdit3.Text = xl.TenPhong(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
                     textEdit4.Text = xl.Soluongtoida(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));

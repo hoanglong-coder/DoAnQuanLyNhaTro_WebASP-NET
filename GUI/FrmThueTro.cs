@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_DAL;
+using System.Text.RegularExpressions;
 namespace GUI
 {
     public partial class FrmThueTro : Form
@@ -296,11 +297,20 @@ namespace GUI
             }
             return true;
         }
+        private static Regex email_validation()
+        {
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+
+            return new Regex(pattern, RegexOptions.IgnoreCase);
+        }
+        static Regex validate_emailaddress = email_validation();
         private void simpleButton6_Click(object sender, EventArgs e)
         {
-            if (textEdit1.Text == "" || textEdit3.Text == "" || textEdit4.Text == "" || textEdit5.Text == "" || textEdit6.Text == ""||txtemail.Text=="")
+            if (textEdit1.Text == "" || textEdit3.Text == "" || textEdit4.Text == "" || textEdit5.Text == "" || textEdit6.Text == "" || txtemail.Text == "" || validate_emailaddress.IsMatch(txtemail.Text) != true)
             {
-                MessageBox.Show("Điền đủ thông tin");
+                MessageBox.Show("Chưa iền đủ thông tin hoặc sai!");
                 return;
             }
             if (textEdit7.Text == "")

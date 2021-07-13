@@ -51,6 +51,11 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MATB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TINHTRANG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -72,11 +77,6 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MATB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TINHTRANG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
@@ -153,6 +153,7 @@
             this.textEdit5.Size = new System.Drawing.Size(493, 26);
             this.textEdit5.StyleController = this.layoutControl1;
             this.textEdit5.TabIndex = 22;
+            this.textEdit5.EditValueChanged += new System.EventHandler(this.textEdit5_EditValueChanged);
             this.textEdit5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit5_KeyPress);
             // 
             // textEdit4
@@ -370,6 +371,41 @@
             this.dataGridView2.TabIndex = 6;
             this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "MATB";
+            this.Column7.HeaderText = "Mã thiết bị";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // MATB
+            // 
+            this.MATB.DataPropertyName = "TENTB";
+            this.MATB.HeaderText = "Tên thiết bị";
+            this.MATB.Name = "MATB";
+            this.MATB.ReadOnly = true;
+            // 
+            // SOLUONG
+            // 
+            this.SOLUONG.DataPropertyName = "SOLUONG";
+            this.SOLUONG.HeaderText = "Số lượng";
+            this.SOLUONG.Name = "SOLUONG";
+            this.SOLUONG.ReadOnly = true;
+            // 
+            // TINHTRANG
+            // 
+            this.TINHTRANG.DataPropertyName = "TINHTRANG";
+            this.TINHTRANG.HeaderText = "Tình trạng";
+            this.TINHTRANG.Name = "TINHTRANG";
+            this.TINHTRANG.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "MALOAI";
+            this.Column8.HeaderText = "Mã loại";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -577,41 +613,6 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(655, 35);
             this.layoutControlItem9.Text = "Loại thiết bị";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(121, 19);
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "MATB";
-            this.Column7.HeaderText = "Mã thiết bị";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // MATB
-            // 
-            this.MATB.DataPropertyName = "TENTB";
-            this.MATB.HeaderText = "Tên thiết bị";
-            this.MATB.Name = "MATB";
-            this.MATB.ReadOnly = true;
-            // 
-            // SOLUONG
-            // 
-            this.SOLUONG.DataPropertyName = "SOLUONG";
-            this.SOLUONG.HeaderText = "Số lượng";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.ReadOnly = true;
-            // 
-            // TINHTRANG
-            // 
-            this.TINHTRANG.DataPropertyName = "TINHTRANG";
-            this.TINHTRANG.HeaderText = "Tình trạng";
-            this.TINHTRANG.Name = "TINHTRANG";
-            this.TINHTRANG.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "MALOAI";
-            this.Column8.HeaderText = "Mã loại";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             // 
             // FrmPhongThietbi
             // 
