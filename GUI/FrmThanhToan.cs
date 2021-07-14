@@ -61,6 +61,9 @@ namespace GUI
             comboBox10.DataSource = xl.loadkt();
             comboBox10.DisplayMember = "NGAYSINH";
             comboBox10.ValueMember = "MAKT";
+            comboBox3.DataSource = xl.loadkt();
+            comboBox3.DisplayMember = "GMAIL";
+            comboBox3.ValueMember = "MAKT";
 
 
         }
@@ -90,7 +93,7 @@ namespace GUI
                     textEdit3.Text = xl.TenPhong(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
                     textEdit4.Text = xl.Soluongtoida(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
                     textEdit5.Text = xl.Soluonghientai(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
-
+                    comboBox3.SelectedValue = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
                     dataGridView1.DataSource = xl.loadphieuthuv2(int.Parse(dataGridView3.CurrentRow.Cells[0].Value.ToString()));
                     
                 }

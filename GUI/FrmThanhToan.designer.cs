@@ -117,6 +117,8 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
@@ -174,10 +176,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.comboBox3);
             this.layoutControl1.Controls.Add(this.simpleButton4);
             this.layoutControl1.Controls.Add(this.textEdit12);
             this.layoutControl1.Controls.Add(this.simpleButton5);
@@ -515,7 +519,7 @@
             this.comboBox10.Location = new System.Drawing.Point(908, 161);
             this.comboBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(631, 31);
+            this.comboBox10.Size = new System.Drawing.Size(233, 31);
             this.comboBox10.TabIndex = 30;
             this.comboBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -709,7 +713,8 @@
             this.layoutControlItem13,
             this.layoutControlItem14,
             this.layoutControlItem19,
-            this.layoutControlItem15});
+            this.layoutControlItem15,
+            this.layoutControlItem32});
             this.layoutControlGroup4.Location = new System.Drawing.Point(717, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
             this.layoutControlGroup4.Size = new System.Drawing.Size(826, 196);
@@ -774,7 +779,7 @@
             this.layoutControlItem15.Control = this.comboBox10;
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 105);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(802, 35);
+            this.layoutControlItem15.Size = new System.Drawing.Size(404, 35);
             this.layoutControlItem15.Text = "Ngày sinh";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(155, 19);
             // 
@@ -1070,6 +1075,24 @@
             this.layoutControlItem17.Text = "Số lượng hiện tại";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(155, 19);
             // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(1312, 161);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(227, 31);
+            this.comboBox3.TabIndex = 57;
+            // 
+            // layoutControlItem32
+            // 
+            this.layoutControlItem32.Control = this.comboBox3;
+            this.layoutControlItem32.Location = new System.Drawing.Point(404, 105);
+            this.layoutControlItem32.Name = "layoutControlItem32";
+            this.layoutControlItem32.Size = new System.Drawing.Size(398, 35);
+            this.layoutControlItem32.Text = "Mail";
+            this.layoutControlItem32.TextSize = new System.Drawing.Size(155, 19);
+            // 
             // FrmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1137,6 +1160,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1231,5 +1255,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
     }
 }
