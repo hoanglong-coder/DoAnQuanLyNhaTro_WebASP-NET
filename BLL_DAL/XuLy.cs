@@ -540,6 +540,14 @@ namespace BLL_DAL
             var kt = db.KHACHTROs.Single(t => t.MAKT == makt).GMAIL.ToString();
             return kt;
         }
+        public IQueryable DsThanhvien(int mapt)
+        {
+            var ds = from t in db.KHACHTROs
+                     from c in db.PHIEUTHUEPHONGs
+                     where t.MAKT == c.MAKT && t.CHUHO == false && t.TRANGTHAI == true && c.MAPT == mapt
+                     select new { MAKT = t.MAKT, HOTEN = t.HOTEN, CMND = t.CMND, SDT = t.SDT, MAIL = t.GMAIL };
+            return ds;
+        }
         //Dịch vụ
         public IQueryable LoadDV()
         {

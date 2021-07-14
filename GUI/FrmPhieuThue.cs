@@ -89,6 +89,7 @@ namespace GUI
                     textEdit5.Text = xl.Soluonghientai(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
                     dataGridView1.DataSource = xl.LoadCTTBPHONG(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
                     dataGridView2.DataSource = xl.loadDvphieuthuev2(int.Parse(dataGridView3.CurrentRow.Cells[0].Value.ToString()));
+                    dataGridView4.DataSource = xl.DsThanhvien(int.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString()));
 
                 }
             }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPhieuThue));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -92,10 +93,18 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
@@ -132,12 +141,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.dataGridView4);
             this.layoutControl1.Controls.Add(this.textEdit6);
             this.layoutControl1.Controls.Add(this.comboBox3);
             this.layoutControl1.Controls.Add(this.simpleButton1);
@@ -166,27 +178,35 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(824, 467, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1296, 877);
+            this.layoutControl1.Size = new System.Drawing.Size(1388, 1140);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // textEdit6
+            // 
+            this.textEdit6.Location = new System.Drawing.Point(157, 91);
+            this.textEdit6.Name = "textEdit6";
+            this.textEdit6.Size = new System.Drawing.Size(498, 26);
+            this.textEdit6.StyleController = this.layoutControl1;
+            this.textEdit6.TabIndex = 44;
             // 
             // comboBox3
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1090, 161);
+            this.comboBox3.Location = new System.Drawing.Point(1158, 161);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(182, 31);
+            this.comboBox3.Size = new System.Drawing.Size(206, 31);
             this.comboBox3.TabIndex = 43;
             // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(639, 794);
+            this.simpleButton1.Location = new System.Drawing.Point(683, 1057);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(633, 59);
+            this.simpleButton1.Size = new System.Drawing.Size(681, 59);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 42;
             this.simpleButton1.Text = "In phiếu thuê";
@@ -194,10 +214,10 @@
             // 
             // radioButton2
             // 
-            this.radioButton2.Location = new System.Drawing.Point(318, 241);
+            this.radioButton2.Location = new System.Drawing.Point(340, 241);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(293, 37);
+            this.radioButton2.Size = new System.Drawing.Size(315, 37);
             this.radioButton2.TabIndex = 41;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Ngừng thuê";
@@ -209,7 +229,7 @@
             this.radioButton1.Location = new System.Drawing.Point(24, 241);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(290, 37);
+            this.radioButton1.Size = new System.Drawing.Size(312, 37);
             this.radioButton1.TabIndex = 40;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Đang thuê";
@@ -225,13 +245,13 @@
             this.Column10,
             this.Column11,
             this.Column12});
-            this.dataGridView2.Location = new System.Drawing.Point(639, 576);
+            this.dataGridView2.Location = new System.Drawing.Point(683, 858);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(633, 214);
+            this.dataGridView2.Size = new System.Drawing.Size(681, 195);
             this.dataGridView2.TabIndex = 39;
             // 
             // Column13
@@ -264,37 +284,37 @@
             // 
             // textEdit5
             // 
-            this.textEdit5.Location = new System.Drawing.Point(1089, 282);
+            this.textEdit5.Location = new System.Drawing.Point(1157, 282);
             this.textEdit5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(183, 26);
+            this.textEdit5.Size = new System.Drawing.Size(207, 26);
             this.textEdit5.StyleController = this.layoutControl1;
             this.textEdit5.TabIndex = 38;
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(772, 282);
+            this.textEdit4.Location = new System.Drawing.Point(816, 282);
             this.textEdit4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(180, 26);
+            this.textEdit4.Size = new System.Drawing.Size(204, 26);
             this.textEdit4.StyleController = this.layoutControl1;
             this.textEdit4.TabIndex = 37;
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(1089, 252);
+            this.textEdit3.Location = new System.Drawing.Point(1157, 252);
             this.textEdit3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(183, 26);
+            this.textEdit3.Size = new System.Drawing.Size(207, 26);
             this.textEdit3.StyleController = this.layoutControl1;
             this.textEdit3.TabIndex = 36;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(772, 252);
+            this.textEdit1.Location = new System.Drawing.Point(816, 252);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(180, 26);
+            this.textEdit1.Size = new System.Drawing.Size(204, 26);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 35;
             // 
@@ -303,17 +323,17 @@
             this.textBox1.Location = new System.Drawing.Point(157, 151);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(454, 30);
+            this.textBox1.Size = new System.Drawing.Size(498, 30);
             this.textBox1.TabIndex = 34;
             // 
             // comboBox10
             // 
             this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(772, 161);
+            this.comboBox10.Location = new System.Drawing.Point(816, 161);
             this.comboBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(181, 31);
+            this.comboBox10.Size = new System.Drawing.Size(205, 31);
             this.comboBox10.TabIndex = 30;
             this.comboBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -321,10 +341,10 @@
             // 
             this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(1089, 126);
+            this.comboBox9.Location = new System.Drawing.Point(1157, 126);
             this.comboBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(183, 31);
+            this.comboBox9.Size = new System.Drawing.Size(207, 31);
             this.comboBox9.TabIndex = 29;
             this.comboBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -332,10 +352,10 @@
             // 
             this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(772, 126);
+            this.comboBox8.Location = new System.Drawing.Point(816, 126);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(180, 31);
+            this.comboBox8.Size = new System.Drawing.Size(204, 31);
             this.comboBox8.TabIndex = 28;
             this.comboBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -343,10 +363,10 @@
             // 
             this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(1089, 91);
+            this.comboBox7.Location = new System.Drawing.Point(1157, 91);
             this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(183, 31);
+            this.comboBox7.Size = new System.Drawing.Size(207, 31);
             this.comboBox7.TabIndex = 27;
             this.comboBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -354,10 +374,10 @@
             // 
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(772, 91);
+            this.comboBox6.Location = new System.Drawing.Point(816, 91);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(180, 31);
+            this.comboBox6.Size = new System.Drawing.Size(204, 31);
             this.comboBox6.TabIndex = 26;
             this.comboBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -365,10 +385,10 @@
             // 
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(1089, 56);
+            this.comboBox5.Location = new System.Drawing.Point(1157, 56);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(183, 31);
+            this.comboBox5.Size = new System.Drawing.Size(207, 31);
             this.comboBox5.TabIndex = 25;
             this.comboBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -376,10 +396,10 @@
             // 
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(772, 56);
+            this.comboBox4.Location = new System.Drawing.Point(816, 56);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(180, 31);
+            this.comboBox4.Size = new System.Drawing.Size(204, 31);
             this.comboBox4.TabIndex = 24;
             this.comboBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -400,7 +420,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(587, 571);
+            this.dataGridView3.Size = new System.Drawing.Size(631, 834);
             this.dataGridView3.TabIndex = 15;
             this.dataGridView3.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
@@ -454,13 +474,13 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(639, 368);
+            this.dataGridView1.Location = new System.Drawing.Point(683, 368);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 148);
+            this.dataGridView1.Size = new System.Drawing.Size(681, 185);
             this.dataGridView1.TabIndex = 13;
             // 
             // Column7
@@ -491,7 +511,7 @@
             this.comboBox2.Location = new System.Drawing.Point(157, 56);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(454, 31);
+            this.comboBox2.Size = new System.Drawing.Size(498, 31);
             this.comboBox2.TabIndex = 7;
             this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
@@ -500,7 +520,7 @@
             this.textEdit2.Location = new System.Drawing.Point(157, 121);
             this.textEdit2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(454, 26);
+            this.textEdit2.Size = new System.Drawing.Size(498, 26);
             this.textEdit2.StyleController = this.layoutControl1;
             this.textEdit2.TabIndex = 5;
             // 
@@ -514,9 +534,10 @@
             this.layoutControlGroup2,
             this.layoutControlGroup6,
             this.layoutControlGroup3,
-            this.layoutControlGroup7});
+            this.layoutControlGroup7,
+            this.layoutControlGroup8});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1296, 877);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1388, 1140);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup4
@@ -530,9 +551,9 @@
             this.layoutControlItem19,
             this.layoutControlItem15,
             this.layoutControlItem22});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(615, 0);
+            this.layoutControlGroup4.Location = new System.Drawing.Point(659, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(661, 196);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(709, 196);
             this.layoutControlGroup4.Text = "Thông tin khách trọ";
             // 
             // layoutControlItem6
@@ -540,16 +561,16 @@
             this.layoutControlItem6.Control = this.comboBox4;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(317, 35);
+            this.layoutControlItem6.Size = new System.Drawing.Size(341, 35);
             this.layoutControlItem6.Text = "Tên khách trọ";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(121, 19);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.comboBox5;
-            this.layoutControlItem9.Location = new System.Drawing.Point(317, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(341, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(320, 35);
+            this.layoutControlItem9.Size = new System.Drawing.Size(344, 35);
             this.layoutControlItem9.Text = "CMND/CCCD";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -558,16 +579,16 @@
             this.layoutControlItem12.Control = this.comboBox6;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 35);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(317, 35);
+            this.layoutControlItem12.Size = new System.Drawing.Size(341, 35);
             this.layoutControlItem12.Text = "Giới tính";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(121, 19);
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.comboBox7;
-            this.layoutControlItem13.Location = new System.Drawing.Point(317, 35);
+            this.layoutControlItem13.Location = new System.Drawing.Point(341, 35);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(320, 35);
+            this.layoutControlItem13.Size = new System.Drawing.Size(344, 35);
             this.layoutControlItem13.Text = "Nghề nghiệp";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -576,16 +597,16 @@
             this.layoutControlItem14.Control = this.comboBox8;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(317, 35);
+            this.layoutControlItem14.Size = new System.Drawing.Size(341, 35);
             this.layoutControlItem14.Text = "Địa chỉ";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(121, 19);
             // 
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.comboBox9;
-            this.layoutControlItem19.Location = new System.Drawing.Point(317, 70);
+            this.layoutControlItem19.Location = new System.Drawing.Point(341, 70);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(320, 35);
+            this.layoutControlItem19.Size = new System.Drawing.Size(344, 35);
             this.layoutControlItem19.Text = "Số điện thoại";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -594,16 +615,16 @@
             this.layoutControlItem15.Control = this.comboBox10;
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 105);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(318, 35);
+            this.layoutControlItem15.Size = new System.Drawing.Size(342, 35);
             this.layoutControlItem15.Text = "Ngày sinh";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(121, 19);
             // 
             // layoutControlItem22
             // 
             this.layoutControlItem22.Control = this.comboBox3;
-            this.layoutControlItem22.Location = new System.Drawing.Point(318, 105);
+            this.layoutControlItem22.Location = new System.Drawing.Point(342, 105);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(319, 35);
+            this.layoutControlItem22.Size = new System.Drawing.Size(343, 35);
             this.layoutControlItem22.Text = "Mail";
             this.layoutControlItem22.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -614,9 +635,9 @@
             this.layoutControlItem7,
             this.layoutControlItem16,
             this.layoutControlItem17});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(615, 196);
+            this.layoutControlGroup5.Location = new System.Drawing.Point(659, 196);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(661, 116);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(709, 116);
             this.layoutControlGroup5.Text = "Thông tin phòng";
             // 
             // layoutControlItem1
@@ -624,16 +645,16 @@
             this.layoutControlItem1.Control = this.textEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(317, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(341, 30);
             this.layoutControlItem1.Text = "Loại phòng";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(121, 19);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.textEdit3;
-            this.layoutControlItem7.Location = new System.Drawing.Point(317, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(341, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(320, 30);
+            this.layoutControlItem7.Size = new System.Drawing.Size(344, 30);
             this.layoutControlItem7.Text = "Tên phòng";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -642,16 +663,16 @@
             this.layoutControlItem16.Control = this.textEdit4;
             this.layoutControlItem16.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(317, 30);
+            this.layoutControlItem16.Size = new System.Drawing.Size(341, 30);
             this.layoutControlItem16.Text = "Số lượng tối đa";
             this.layoutControlItem16.TextSize = new System.Drawing.Size(121, 19);
             // 
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.textEdit5;
-            this.layoutControlItem17.Location = new System.Drawing.Point(317, 30);
+            this.layoutControlItem17.Location = new System.Drawing.Point(341, 30);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(320, 30);
+            this.layoutControlItem17.Size = new System.Drawing.Size(344, 30);
             this.layoutControlItem17.Text = "Số lượng hiện tại";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -659,9 +680,9 @@
             // 
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem10});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(615, 312);
+            this.layoutControlGroup2.Location = new System.Drawing.Point(659, 312);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(661, 208);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(709, 245);
             this.layoutControlGroup2.Text = "Danh sách thiết bị";
             // 
             // layoutControlItem10
@@ -669,7 +690,7 @@
             this.layoutControlItem10.Control = this.dataGridView1;
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(637, 152);
+            this.layoutControlItem10.Size = new System.Drawing.Size(685, 189);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -678,9 +699,9 @@
             this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem11,
             this.layoutControlItem21});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(615, 520);
+            this.layoutControlGroup6.Location = new System.Drawing.Point(659, 802);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(661, 337);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(709, 318);
             this.layoutControlGroup6.Text = "Danh sách dịch vụ";
             // 
             // layoutControlItem11
@@ -688,16 +709,16 @@
             this.layoutControlItem11.Control = this.dataGridView2;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(637, 218);
+            this.layoutControlItem11.Size = new System.Drawing.Size(685, 199);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.simpleButton1;
-            this.layoutControlItem21.Location = new System.Drawing.Point(0, 218);
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 199);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(637, 63);
+            this.layoutControlItem21.Size = new System.Drawing.Size(685, 63);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextVisible = false;
             // 
@@ -709,7 +730,7 @@
             this.layoutControlItem20});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 185);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(615, 672);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(659, 935);
             this.layoutControlGroup3.Text = "Danh sách phiếu thuê";
             // 
             // layoutControlItem8
@@ -717,7 +738,7 @@
             this.layoutControlItem8.Control = this.dataGridView3;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 41);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(591, 575);
+            this.layoutControlItem8.Size = new System.Drawing.Size(635, 838);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -726,16 +747,16 @@
             this.layoutControlItem18.Control = this.radioButton1;
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(294, 41);
+            this.layoutControlItem18.Size = new System.Drawing.Size(316, 41);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.radioButton2;
-            this.layoutControlItem20.Location = new System.Drawing.Point(294, 0);
+            this.layoutControlItem20.Location = new System.Drawing.Point(316, 0);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(297, 41);
+            this.layoutControlItem20.Size = new System.Drawing.Size(319, 41);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextVisible = false;
             // 
@@ -748,7 +769,7 @@
             this.layoutControlItem23});
             this.layoutControlGroup7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup7.Name = "layoutControlGroup7";
-            this.layoutControlGroup7.Size = new System.Drawing.Size(615, 185);
+            this.layoutControlGroup7.Size = new System.Drawing.Size(659, 185);
             this.layoutControlGroup7.Text = "Thông tin phiếu thuê";
             // 
             // layoutControlItem4
@@ -756,7 +777,7 @@
             this.layoutControlItem4.Control = this.comboBox2;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(591, 35);
+            this.layoutControlItem4.Size = new System.Drawing.Size(635, 35);
             this.layoutControlItem4.Text = "Tên khách trọ";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -765,7 +786,7 @@
             this.layoutControlItem2.Control = this.textEdit2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 65);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(591, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(635, 30);
             this.layoutControlItem2.Text = "Ngày thuê";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(121, 19);
             // 
@@ -774,32 +795,95 @@
             this.layoutControlItem5.Control = this.textBox1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 95);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(591, 34);
+            this.layoutControlItem5.Size = new System.Drawing.Size(635, 34);
             this.layoutControlItem5.Text = "Trạng thái";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(121, 19);
-            // 
-            // textEdit6
-            // 
-            this.textEdit6.Location = new System.Drawing.Point(157, 91);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(454, 26);
-            this.textEdit6.StyleController = this.layoutControl1;
-            this.textEdit6.TabIndex = 44;
             // 
             // layoutControlItem23
             // 
             this.layoutControlItem23.Control = this.textEdit6;
             this.layoutControlItem23.Location = new System.Drawing.Point(0, 35);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(591, 30);
+            this.layoutControlItem23.Size = new System.Drawing.Size(635, 30);
             this.layoutControlItem23.Text = "Tên phòng";
             this.layoutControlItem23.TextSize = new System.Drawing.Size(121, 19);
+            // 
+            // layoutControlGroup8
+            // 
+            this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3});
+            this.layoutControlGroup8.Location = new System.Drawing.Point(659, 557);
+            this.layoutControlGroup8.Name = "layoutControlGroup8";
+            this.layoutControlGroup8.Size = new System.Drawing.Size(709, 245);
+            this.layoutControlGroup8.Text = "Danh sách thành viên";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18});
+            this.dataGridView4.Location = new System.Drawing.Point(683, 613);
+            this.dataGridView4.MultiSelect = false;
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowTemplate.Height = 28;
+            this.dataGridView4.Size = new System.Drawing.Size(681, 185);
+            this.dataGridView4.TabIndex = 45;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.dataGridView4;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(685, 189);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "MAKT";
+            this.Column14.HeaderText = "Mã khách trọ";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "HOTEN";
+            this.Column15.HeaderText = "Họ tên";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "CMND";
+            this.Column16.HeaderText = "CMND";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "SDT";
+            this.Column17.HeaderText = "SDT";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.DataPropertyName = "MAIL";
+            this.Column18.HeaderText = "MAIL";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
             // 
             // FrmPhieuThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 877);
+            this.ClientSize = new System.Drawing.Size(1388, 1140);
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPhieuThue";
@@ -807,6 +891,7 @@
             this.Load += new System.EventHandler(this.FrmPhieuThue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
@@ -843,8 +928,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -916,5 +1003,13 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
         private DevExpress.XtraEditors.TextEdit textEdit6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
     }
 }
